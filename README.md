@@ -35,6 +35,18 @@ sumNumbers("aa11b33") → 44
 sumNumbers("7 11") → 18
 ```
 
+### Methods 3
+Given a string and a non-empty word string, return a version of the original String where all chars have been replaced by pluses ("+"), except for appearances of the word string which are preserved unchanged.
+### public static String plusOut(String str, String word)
+
+#### Examples
+```
+plusOut("12xy34", "xy") → "++xy++"
+plusOut("12xy34", "1") → "1+++++"
+plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
+```
+
+
 ### File IO - Read 1
 Write a method `longestWord(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line,  returns the longest word in the file.  
 **Signature** `public static String longestWord(String filenametxt)`
@@ -69,7 +81,9 @@ consectetur
 adipiscing 
 elit
 ```
-`alphaWord("words.txt")` --> `"amet"`
+`alphaWord("words.txt")` --> `"adipiscing"`
+
+
 
 
 ### Array 1 - One Dimensional
