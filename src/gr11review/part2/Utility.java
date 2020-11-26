@@ -1,40 +1,65 @@
 package gr11review.part2;
-import java.lang.*;
+import java.io.*;
 
 public class Utility {
     
+  public static void main(String[] args) throws IOException {
+
+    String sentence;
+
+    BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+
+    System.out.println("Enter a sentence: ");
+    sentence = keyboard.readLine();
+
+    System.out.println(sumNumbers(sentence));
+
+  }
+
   public static int sumNumbers(String str) {
 
-    boolean isChar;
-    int numOfConsecutiveChars = 0;
+    boolean isNum = false;
     int length = str.length();
     int count;
-    String currentNum;
+    int count2;
+    String currentNum = "";
     int total = 0;
+    String strTotal = "0";
     String currentSubstring;
+    String[] nums = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
     for (count = 0; count < length; count++) {
 
+      isNum = false;
+      currentNum = "";
+
       currentSubstring = str.substring(count, count + 1);
 
-      isChar = Character.isDigit(currentSubstring);
+      // check if substring is a number
+      for (count2 = 0; count2 < 10; count2++) {
+        if (currentSubstring.contains(nums[count2])) {
+          isNum = true;
+          break;
+        }
+      }
 
-      if (isChar) {
-
-        numOfConsecutiveChars++;
-
+      if (isNum) {
+        
         currentNum += currentSubstring;
         
+        strTotal += currentNum;
+
       } else {
 
-        total += Integer.parseInt(currentNum);
-
-        numOfConsecutiveChars = 0;
+        total += Integer.parseInt(strTotal);
+        strTotal = "0";
 
       }
 
     }
 
-  }
+    total += Integer.parseInt(strTotal);
 
+    return total;
+  }
 }
