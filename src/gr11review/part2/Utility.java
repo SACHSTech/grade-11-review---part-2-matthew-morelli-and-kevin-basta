@@ -35,13 +35,28 @@ public class Utility {
     return strReturnPattern;
   }
 
-  public static void main(String[] args) throws IOException {
-    BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
-    String strUserInput;
-    String strOutPut;
-    strUserInput = keyboard.readLine();
+  public static String longestWord(String filenametxt) {
+    BufferedReader textFile = new BufferedReader(new FileReader("RandomWords.txt"));
+    int intLengthOfWord = 0;
+    int intLengthOfFile = 0;
+    String strLongestWord = "";
+    String strBufferWord = "";
+    int i = 0;
 
-    strOutPut = zipZap(strUserInput);
-    System.out.println(strOutPut);
+    while (textFile.readLine() != null) {
+      strBufferWord = textFile.readLine();
+      if (strBufferWord.length() > intLengthOfWord) {
+        intLengthOfWord = strBufferWord.length();
+        strLongestWord = strBufferWord;
+      }
+    }
+    textFile.close();
+
+    return strLongestWord;
+  }
+
+  public int[] tenRun(int[] nums) {
+
+    return l;
   }
 }

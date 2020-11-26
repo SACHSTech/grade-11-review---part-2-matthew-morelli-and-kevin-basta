@@ -1,15 +1,20 @@
 package gr11review.part2;
-import java.io.*;
-import gr11review.part2.Utility.java;
 
-public class Main { 
-  public static void main(String[] args) throws IOException {
-    BufferedReader keybaord = new BufferedReader(new InputStreamReader(System.in));
+import gr11review.part2.Utility.*;
+import java.io.*;
+
+public class Main{
+  public static void main(String[] args) throws IOException{
+    /* BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
     String strUserInput;
     String strOutPut;
-    strUserInput = keybaord.readLine();
+    strUserInput = keyboard.readLine();
 
     strOutPut = Utility.zipZap(strUserInput);
     System.out.println(strOutPut);
+    */
+
+    String strFile = "RandomWords.txt";
+    System.out.println(Utility.longestWord(strFile));
   }
-}
+} 
