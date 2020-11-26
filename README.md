@@ -83,6 +83,19 @@ elit
 ```
 `alphaWord("words.txt")` --> `"adipiscing"`
 
+### File IO - Read 3
+Write a method `avgWord(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line, returns the average length of the words in the file.  
+**Signature** `public static double avgWord(String filenametxt)`
+
+#### Example
+words.txt contains:  
+```
+sit
+amet
+consectetur
+```
+`avgWord("words.txt")` --> `6.0`
+
 
 
 
