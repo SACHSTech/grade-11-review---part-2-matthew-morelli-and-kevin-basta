@@ -3,6 +3,17 @@ import java.util.*;
 import java.io.*;
 
 public class Utility {
+
+   /**
+  * This method takes a string input and if the letters z and p
+  * exsist in the string with only one letter between them, then 
+  * that letter gets taken out of the string.
+  *
+  * @param str  This is the string given
+  * @return this method returns a String that does not include 
+  * the letters between the z's and p's in the original string
+  * @author Kevin Basta
+  */
   public static String zipZap(String str) {
     String strLetterBefore;
     String strFirstLetter;
@@ -36,6 +47,15 @@ public class Utility {
     return strReturnPattern;
   }
   
+
+  /**
+  * This method is given a txt file an it determines what is the
+  * longest word in that file
+  *
+  * @param filenametxt  This is the name of the text file that contains the words
+  * @return this method returns the longes word it found in the text file
+  * @author Kevin Basta
+  */
   public static String longestWord(String filenametxt) throws IOException{
     BufferedReader textFile = new BufferedReader(new FileReader("src/gr11review/part2/" + filenametxt));
     int intLengthOfWord = 0;
@@ -45,11 +65,9 @@ public class Utility {
     while (strBufferWord != null) {
       if (strBufferWord.length() == strLongestWord.length()) {
         strLongestWord = strBufferWord;
-        System.out.println("equal: " + strBufferWord);
       } else if (strBufferWord.length() > intLengthOfWord) {
         intLengthOfWord = strBufferWord.length();
         strLongestWord = strBufferWord;
-        System.out.println("greater: " + strBufferWord);
       }
       strBufferWord = textFile.readLine();
     }
@@ -58,6 +76,16 @@ public class Utility {
     return strLongestWord;
   } 
 
+
+  /**
+  * For each multiple of 10 in a given array, all the values following it 
+  * are changed to that multiple of 10, until encountering another multiple 
+  * of 10 in which that one gets repeated and so on. 
+  *
+  *`@param nums  This is the array initially given
+  * @return This returns a new array with the repeated multiples of 10 format
+  * @author Kevin Basta
+  */
   public static int[] tenRun(int[] nums) {
     int[] outputNumbers;
     outputNumbers = new int[nums.length]; 
@@ -80,6 +108,17 @@ public class Utility {
     return outputNumbers;
   }
 
+
+   /**
+  * This method tests to see if the values of one array
+  * are all in a different array.
+  * 
+  * @param outer  an array of numbers longer than inner
+  * @param inner  an array of numers shorter than outer 
+  * @return a boolean value is returned depending on if all 
+  * the inner values were in outer or not
+  * @author Kevin Basta
+  */
   public static boolean linearIn(int[] outer, int[] inner) {
     boolean trueOrFalse = true;
     int i;
@@ -106,15 +145,17 @@ public class Utility {
     return trueOrFalse;
   }
 
+
+
   /**
-  * Description
+  * This method is given the amount of rows and columns, and then 
+  * generates a comma separted table containing i rows and j columns of pascal's triangle.
   *
-  * @param
-  * @param
-  * @return
+  * @param i  The height of the array (or amount of rows)
+  * @param j  The width of the array (or amount of columns)
+  * @output prints the pascal's trinagle in the text file "pascalOut.txt"
   * @author Kevin Basta
   */
-
   public static void pascalTri(int i, int j) throws IOException {
     int intHeight;
     int intWidth;
@@ -144,7 +185,7 @@ public class Utility {
       }
     }
     
-    PrintWriter printTriangle = new PrintWriter(new FileWriter("src/gr11review/part2/pascalTriangleFile.txt", true));
+    PrintWriter printTriangle = new PrintWriter(new FileWriter("src/gr11review/part2/pascalOut.txt", false));
     for (intHeight = 0; intHeight < i; intHeight++) {
       for (intWidth = 0; intWidth < j; intWidth++) { 
         if (intWidth == j - 1) {
@@ -157,4 +198,5 @@ public class Utility {
     }
     printTriangle.close();
   }
+
 }
