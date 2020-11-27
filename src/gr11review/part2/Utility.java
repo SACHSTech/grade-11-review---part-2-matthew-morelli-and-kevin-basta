@@ -1,4 +1,5 @@
 package gr11review.part2;
+import java.util.*;
 import java.io.*;
 
 public class Utility {
@@ -35,6 +36,7 @@ public class Utility {
     return strReturnPattern;
   }
 
+  /*
   public static String longestWord(String filenametxt) {
     BufferedReader textFile = new BufferedReader(new FileReader("RandomWords.txt"));
     int intLengthOfWord = 0;
@@ -53,10 +55,34 @@ public class Utility {
     textFile.close();
 
     return strLongestWord;
+  } */
+
+  public static int[] tenRun(int[] nums) {
+    int[] outputNumbers;
+    outputNumbers = new int[nums.length]; 
+    int numberAdding = 0;
+    boolean blnRepeat = false;
+    int i;
+    for (i = 0; i < nums.length; i ++) {
+      if (nums[i] % 10 == 0) {
+        numberAdding = nums[i];
+        blnRepeat = true;
+      } else if (blnRepeat == true){
+
+      } else {
+        blnRepeat = false;
+        numberAdding = nums[i];
+      }
+
+      outputNumbers[i] = numberAdding;
+    }
+    return outputNumbers;
   }
 
-  public int[] tenRun(int[] nums) {
-
-    return l;
+  public static boolean linearIn(int[] outer, int[] inner) {
+    
   }
+
+
+
 }

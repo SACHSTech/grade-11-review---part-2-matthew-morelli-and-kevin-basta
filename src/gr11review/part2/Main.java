@@ -1,7 +1,9 @@
 package gr11review.part2;
 
 import gr11review.part2.Utility.*;
+import java.util.Arrays;
 import java.io.*;
+
 
 public class Main{
   public static void main(String[] args) throws IOException{
@@ -14,7 +16,12 @@ public class Main{
     System.out.println(strOutPut);
     */
 
+    /*
     String strFile = "RandomWords.txt";
     System.out.println(Utility.longestWord(strFile));
+    */
+
+    int[] testArray = {2, 10, 3, 4, 20, 5};
+    System.out.println(Arrays.toString(Utility.tenRun(testArray)));
   }
 } 
