@@ -105,8 +105,48 @@ public class Utility {
     return trueOrFalse;
   }
 
+  /**
+  * Description
+  *
+  * @param
+  * @param
+  * @return
+  * @author Kevin Basta
+  */
 
+  public static void pascalTri(int i, int j) {
+    int intHeight;
+    int intWidth;
+    int intFillRowOne;
+    int intFillColOne;
+    int intLeft;
+    int intAbove;
+    int intPascalValue;
+    int[][] pascalTriangle;
+    pascalTriangle = new int[i][j];
 
+    for (intFillRowOne = 0; intFillRowOne < i; intFillRowOne++) {
+      pascalTriangle[intFillRowOne][0] = 1;
+    }
+    for (intFillColOne = 0; intFillColOne < j; intFillColOne++) {
+      pascalTriangle[0][intFillColOne] = 1;
+    }
 
-
+    for (intHeight = 1; intHeight < i; intHeight++) {
+      for (intWidth = 1; intWidth < j; intWidth++) {
+        if (intHeight > 0) {
+          intLeft = pascalTriangle[intHeight][intWidth - 1];
+          intAbove = pascalTriangle[intHeight - 1][intWidth];
+          intPascalValue = intLeft + intAbove;
+          pascalTriangle [intHeight][intWidth] = intPascalValue;
+        }
+      }
+    }
+    for (intHeight = 0; intHeight < i; intHeight++) {
+      for (intWidth = 0; intWidth < j; intWidth++) { 
+       System.out.print(pascalTriangle[intHeight][intWidth] + ", ");
+      }
+      System.out.println("");
+    }
+  }
 }
