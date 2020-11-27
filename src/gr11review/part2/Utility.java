@@ -114,7 +114,7 @@ public class Utility {
   * @author Kevin Basta
   */
 
-  public static void pascalTri(int i, int j) {
+  public static void pascalTri(int i, int j) throws IOException{
     int intHeight;
     int intWidth;
     int intFillRowOne;
@@ -142,11 +142,18 @@ public class Utility {
         }
       }
     }
+    
+    PrintWriter printTriangle = new PrintWriter(new FileWriter("src/gr11review/part2/pascalTriangleFile.txt", true));
     for (intHeight = 0; intHeight < i; intHeight++) {
       for (intWidth = 0; intWidth < j; intWidth++) { 
-       System.out.print(pascalTriangle[intHeight][intWidth] + ", ");
+        if (intWidth == j - 1) {
+          printTriangle.print(pascalTriangle[intHeight][intWidth]);
+        } else {
+          printTriangle.print(pascalTriangle[intHeight][intWidth] + ", ");
+        }
       }
-      System.out.println("");
+      printTriangle.println("");
     }
+    printTriangle.close();
   }
 }

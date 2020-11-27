@@ -31,6 +31,6 @@ public class Main{
     int[] inner = {2, 4};
     System.out.println(Utility.linearIn(outer, inner));
     */
-    Utility.pascalTri(4, 5);
+    Utility.pascalTri(3, 4);
   }
 } 
