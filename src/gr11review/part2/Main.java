@@ -1,6 +1,7 @@
 package gr11review.part2;
 import java.io.*;
-import gr11review.part2.Utility.java;
+import gr11review.part2.Utility.*;
+import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) throws IOException {
@@ -13,6 +14,14 @@ public class Main {
     sentence = keyboard.readLine();
 
     System.out.println(Utility.sumNumbers(sentence));
+
+    int[] nums = {1, 2, 3, 2, 5, 2};
+
+    System.out.println(Arrays.toString(Utility.notAlone(nums, 2)));
+
+    int[] nums2 = {1, 1, 1, 2, 1};
+
+    System.out.println(Utility.canBalance(nums2));
 
   }
 }
