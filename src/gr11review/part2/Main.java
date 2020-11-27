@@ -16,10 +16,8 @@ public class Main{
     System.out.println(strOutPut);
     */
 
-    /*
     String strFile = "RandomWords.txt";
     System.out.println(Utility.longestWord(strFile));
-    */
 
     /*
     int[] testArray = {2, 10, 3, 4, 20, 5};
@@ -31,6 +29,7 @@ public class Main{
     int[] inner = {2, 4};
     System.out.println(Utility.linearIn(outer, inner));
     */
-    Utility.pascalTri(3, 4);
+
+    //Utility.pascalTri(3, 4);
   }
 } 

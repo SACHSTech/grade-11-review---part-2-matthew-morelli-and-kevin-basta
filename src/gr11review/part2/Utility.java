@@ -35,27 +35,28 @@ public class Utility {
 
     return strReturnPattern;
   }
-
-  /*
-  public static String longestWord(String filenametxt) {
-    BufferedReader textFile = new BufferedReader(new FileReader("RandomWords.txt"));
+  
+  public static String longestWord(String filenametxt) throws IOException{
+    BufferedReader textFile = new BufferedReader(new FileReader("src/gr11review/part2/" + filenametxt));
     int intLengthOfWord = 0;
-    int intLengthOfFile = 0;
     String strLongestWord = "";
-    String strBufferWord = "";
-    int i = 0;
+    String strBufferWord = textFile.readLine();;
 
-    while (textFile.readLine() != null) {
-      strBufferWord = textFile.readLine();
-      if (strBufferWord.length() > intLengthOfWord) {
+    while (strBufferWord != null) {
+      if (strBufferWord.length() == strLongestWord.length()) {
+        strLongestWord = strBufferWord;
+        System.out.println("equal: " + strBufferWord);
+      } else if (strBufferWord.length() > intLengthOfWord) {
         intLengthOfWord = strBufferWord.length();
         strLongestWord = strBufferWord;
+        System.out.println("greater: " + strBufferWord);
       }
+      strBufferWord = textFile.readLine();
     }
     textFile.close();
 
     return strLongestWord;
-  } */
+  } 
 
   public static int[] tenRun(int[] nums) {
     int[] outputNumbers;
@@ -114,7 +115,7 @@ public class Utility {
   * @author Kevin Basta
   */
 
-  public static void pascalTri(int i, int j) throws IOException{
+  public static void pascalTri(int i, int j) throws IOException {
     int intHeight;
     int intWidth;
     int intFillRowOne;
