@@ -15,6 +15,8 @@ public class Main {
 
     System.out.println(Utility.sumNumbers(sentence));
 
+    System.out.println(Utility.alphaWord("src/gr11review/part2/" + "words.txt"));
+
     int[] nums = {1, 2, 3, 2, 5, 2};
 
     System.out.println(Arrays.toString(Utility.notAlone(nums, 2)));
@@ -22,6 +24,8 @@ public class Main {
     int[] nums2 = {1, 1, 1, 2, 1};
 
     System.out.println(Utility.canBalance(nums2));
+
+    Utility.diagonal(8);
 
   }
 }

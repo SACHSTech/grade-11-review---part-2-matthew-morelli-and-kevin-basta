@@ -49,28 +49,33 @@ public class Utility {
 
     return total;
   }
-  /*
-  public static String alphaWord(String filenametxt) {
+  
+  public static String alphaWord(String filenametxt) throws IOException {
 
-    BufferedReader thefile = new BufferedReader(new FileReader("words.txt"));
+    BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
 
     String firstLine = "";
     String secondLine = "";
     String highestAlpha = "";
     int checkAlphaOrder = 0;
 
-    while (secondLine != null) {
+    firstLine = thefile.readLine();
+    secondLine = thefile.readLine();
 
-      firstLine = thefile.readLine();
-      secondLine = thefile.readLine();
+    highestAlpha = secondLine;
+
+    while (secondLine != null) {
 
       checkAlphaOrder = firstLine.compareTo(secondLine);
 
-      if (checkAlphaOrder > 0) {
+      if (checkAlphaOrder < 0) {
 
         highestAlpha = firstLine;
 
       }
+
+      firstLine = thefile.readLine();
+      secondLine = thefile.readLine();
 
     }
 
@@ -78,7 +83,7 @@ public class Utility {
 
     return highestAlpha;
 
-  }*/
+  }
 
   public static int[] notAlone(int[] nums, int value) {
 
@@ -155,6 +160,53 @@ public class Utility {
     }
 
     return rightIsLeft;
+
+  }
+
+  public static void diagonal(int n) throws IOException {
+
+    PrintWriter theout = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt", false));
+
+    int[][] numbers;
+    numbers = new int[n][n];
+    int count;
+    int count2;
+
+    for (count = 0; count < n; count++) {
+
+      for (count2 = 0; count2 < n; count2++) {
+
+        if (count2 == count) {
+
+          numbers[count][count2] = 1;
+
+        } else if (count2 > count) {
+
+          numbers[count][count2] = 2;
+
+        } else {
+
+          numbers[count][count2] = 0;
+
+        }
+
+      }
+
+    }
+
+    for (count = n - 1; count >= 0; count--) {
+
+      for (count2 = 0; count2 < n; count2++) {
+
+        theout.print(numbers[count][count2]);
+
+      }
+
+      theout.println();
+      
+    }
+
+    theout.close();
 
   }
 
