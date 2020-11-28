@@ -105,6 +105,7 @@ public class Utility {
 
       outputNumbers[i] = numberAdding;
     }
+    
     return outputNumbers;
   }
 
@@ -126,13 +127,9 @@ public class Utility {
     for (i = 0; i < inner.length; i++) {
       for (ii = 0; ii < outer.length; ii++) {
         if (outer[ii] == inner[i]) {
-          System.out.println("P outer: " + outer[ii]);
-          System.out.println("P inner: " + inner[i]);
           trueOrFalse = true;
           break;
         } else if (outer[ii] != inner[i] && (ii == outer.length - 1)) {
-          System.out.println("N outer: " + outer[ii]);
-          System.out.println("N inner: " + inner[i]);
           trueOrFalse = false;
           break;
         }
