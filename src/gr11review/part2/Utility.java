@@ -3,6 +3,14 @@ import java.io.*;
 
 public class Utility {
 
+  /**
+  * Given a string, returns sum of all numbers entered.
+  * A new number is any number seperated by a non-number.
+  *
+  * @param str  The string that will be analyzed
+  * @return The sum of the numbers in the string
+  * @author Matthew Morelli
+  */ 
   public static int sumNumbers(String str) {
 
     boolean isNum = false;
@@ -22,7 +30,6 @@ public class Utility {
 
       currentSubstring = str.substring(count, count + 1);
 
-      // check if substring is a number
       for (count2 = 0; count2 < 10; count2++) {
         if (currentSubstring.contains(nums[count2])) {
           isNum = true;
@@ -50,6 +57,16 @@ public class Utility {
     return total;
   }
   
+  /**
+  * Finds the word in a text file that is alphabetically
+  * first.
+  *
+  * @param filenametxt  The name of the text file that
+  * will be analyzed.
+  * @return The word that is alphabetically first in the
+  * file.
+  * @author Matthew Morelli
+  */
   public static String alphaWord(String filenametxt) throws IOException {
 
     BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
@@ -85,6 +102,19 @@ public class Utility {
 
   }
 
+  /**
+  * Checks if a given number is "alone" in an array,
+  * meaning if the number is not surrounded by the same
+  * number and if it is not at the end of the array,
+  * replace it with the number to the left or right
+  * that is higher.
+  *
+  * @param nums  Array of numbers that will be analyze
+  * @param value  The number that will be checked if it
+  * is "alone"
+  * @return The new array with the replaced numbers
+  * @author Matthew Morelli
+  */
   public static int[] notAlone(int[] nums, int value) {
 
     int len = nums.length;
@@ -124,13 +154,21 @@ public class Utility {
 
       }
       
-
     }
 
     return nums;
 
   }
 
+  /**
+  * Checks if there is a place to split the array so that
+  * the sum of numbers on one side equals the sum of
+  * numbers on the other side
+  *
+  * @param nums  The array of numbers that will be checked
+  * @return If it can be split (true or false)
+  * @author Matthew Morelli
+  */ 
   public static boolean canBalance(int[] nums) {
 
     int rightNum = 0;
@@ -162,7 +200,17 @@ public class Utility {
     return rightIsLeft;
 
   }
-
+  /**
+  * Given an integer, prints out a 2d array to a text file
+  * where the numbers from the top right to bottom left
+  * have a value of 1, and positions above that diagonal
+  * have a value of 0, and positions below that diagonal
+  * have a value of 2.
+  *
+  * @param n  The size of the array (n*n)
+  * @return nothing
+  * @author Matthew Morelli
+  */
   public static void diagonal(int n) throws IOException {
 
     PrintWriter theout = new PrintWriter(new FileWriter("src/gr11review/part2/diagonalOut.txt", false));
@@ -198,7 +246,7 @@ public class Utility {
 
       for (count2 = 0; count2 < n; count2++) {
 
-        theout.print(numbers[count][count2]);
+        theout.print(numbers[count][count2] + ",");
 
       }
 
