@@ -1,45 +1,53 @@
 package gr11review.part2;
-import java.io.world.txt;
+
+
 import java.io.*;
 public class Utility {
   public static String plusOut (String str, String word) {
-      String strsentence;
-      int intcount;
-      String strword;
-      strword = "";
-      strsentence = str;
-      for(intcount = 0; intcount < str.length(); intcount++){
-        if(str){
-        
-        
-        }else{
-        
-        
+      
+        String stroldsentence = "";
+        String strnewsentence = "";
+        int intcount;
+        stroldsentence = str.replace(word, "+");
+        for (intcount = 0; intcount < stroldsentence.length(); intcount++) {
+          if (stroldsentence.substring(intcount, intcount + 1).equals("+")) {
+            strnewsentence += word;
+          } else {
+            strnewsentence += "+";
+          }
         }
-     }
+       
+       
+      
 
-
-
+      return strnewsentence;
 
     }
-
-  public static double avgWord(String world){
-      int readingword;
+  /*
+  public static double avgWord(String filenametxt){
+      String readingworld;
       int finalnumber;
       int average;
-      File words = new File("world.txt");
-      Scanner reading = new Scanner(words);
+      int readingwordnumber;
       int intcount2;
-      while(words.hasNextLine()){
-        readingworld = words.nextLine();
+      finalnumber = 0;
+      intcount2 = 0;
+      readingworld = "";
+      BufferedReader file = new BufferedReader(new FileReader("world.txt"));
+      
+      
+      while(file.readLine() != null){
+        readingworld = file.readLine();
+        readingwordnumber = readingworld.length();
         intcount2 = intcount2 +1;
-        finalnumber = readingworld + finalnumber;
+        finalnumber = readingwordnumber + finalnumber;
 
 
 
         }
         average = finalnumber/intcount2;
+        
+        return "";
       }
-
+*/
   }
-}
