@@ -13,31 +13,20 @@ public class Utility {
   */ 
   public static int sumNumbers(String str) {
 
-    boolean isNum = false;
     int len = str.length();
     int count;
-    int count2;
     String currentNum = "";
     int total = 0;
     String strTotal = "0";
     String currentSubstring;
-    String[] nums = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
     for (count = 0; count < len; count++) {
 
-      isNum = false;
       currentNum = "";
 
       currentSubstring = str.substring(count, count + 1);
 
-      for (count2 = 0; count2 < 10; count2++) {
-        if (currentSubstring.contains(nums[count2])) {
-          isNum = true;
-          break;
-        }
-      }
-
-      if (isNum) {
+      if (Character.isDigit(str.charAt(count))) {
         
         currentNum += currentSubstring;
         
