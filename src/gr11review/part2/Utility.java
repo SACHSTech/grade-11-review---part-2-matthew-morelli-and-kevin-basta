@@ -68,37 +68,32 @@ public class Utility {
   * @author Matthew Morelli
   */
   public static String alphaWord(String filenametxt) throws IOException {
-
+    
     BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
 
-    String firstLine = "";
-    String secondLine = "";
-    String highestAlpha = "";
-    int checkAlphaOrder = 0;
+    String word = "";
+    String minWord = "";
+    int count = 0;
 
-    firstLine = thefile.readLine();
-    secondLine = thefile.readLine();
+    while ((word = thefile.readLine()) != null) {
 
-    highestAlpha = secondLine;
+      if (count == 0) {
 
-    while (secondLine != null) {
+        minWord = word;
 
-      checkAlphaOrder = firstLine.compareTo(secondLine);
+      } else if (word.compareToIgnoreCase(minWord) < 0) {
 
-      if (checkAlphaOrder < 0) {
-
-        highestAlpha = firstLine;
+        minWord = word;
 
       }
 
-      firstLine = thefile.readLine();
-      secondLine = thefile.readLine();
+      count++;
 
     }
 
     thefile.close();
 
-    return highestAlpha;
+    return minWord;
 
   }
 
@@ -134,7 +129,7 @@ public class Utility {
 
         if (numMiddle == value) {
 
-          if (numLeft != numRight) {
+          if (numLeft != numMiddle && numRight != numMiddle) {
 
             if (numLeft > numRight) {
 
