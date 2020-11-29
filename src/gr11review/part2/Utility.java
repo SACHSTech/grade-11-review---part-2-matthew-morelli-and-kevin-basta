@@ -3,7 +3,7 @@ package gr11review.part2;
 
 import java.io.*;
 public class Utility {
-  /*
+  
   public static String plusOut (String str, String word) {
       
         String stroldsentence = "";
@@ -24,9 +24,10 @@ public class Utility {
       return strnewsentence;
 
     }
-    */
+    
   
-  public static double avgWord(String filenametxt){
+  public static double avgWord(String filenametxt) throws IOException {
+    BufferedReader file = new BufferedReader(new FileReader(filenametxt));
       String readingworld;
       String wordread;
       double finalnumber;
@@ -35,23 +36,24 @@ public class Utility {
       double intcount2;
       finalnumber = 0;
       intcount2 = 0;
+      wordread = "";
+      readingworld="";
+      readingwordnumber = 0;
       
-      BufferedReader file = new BufferedReader(new FileReader("world.txt"));
       
-      
-      while((file.readLine()) != null){
-        wordread = file.readLine();
-        readingwordnumber = wordread.length();
+      while((wordread = file.readLine()) != null){
+        //wordread = file.readLine();
+       finalnumber = wordread.length() + finalnumber;
         intcount2 = intcount2 +1;
-        finalnumber = readingwordnumber + finalnumber;
+       
 
-
-
-        } 
+       } 
         file.close();
         average = finalnumber/intcount2;
         
         return average;
       }
-
+    /*
+    public static boolean either24(int[] nums)
+    */
   }

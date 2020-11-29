@@ -16,7 +16,7 @@ public class Main{
   System.out.println (Utility.plusOut(strsentence, word));
   */
   String files; 
-  files = "world.txt";
+  files = "src/gr11review/part2/" + "world.txt";
   System.out.println(Utility.avgWord(files));
   }
 
