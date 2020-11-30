@@ -20,10 +20,15 @@ public class Main{
   files = "src/gr11review/part2/" + "world.txt";
   System.out.println(Utility.avgWord(files));
 */
+
+/*
   int[] array24 = {4, 4, 1, 2, 2};
   System.out.println(Utility.either24(array24));
+  */
+  
+  int[] arraymaxspan = {1, 2, 1, 1, 3};
+  System.out.println(Utility.maxSpan(arraymaxspan));
+
   }
-
-
 
 }

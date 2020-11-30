@@ -54,7 +54,7 @@ public class Utility {
         return average;
       }
       */
-    
+    /*
     public static boolean either24(int[] nums){
    
     int intcount3;
@@ -68,5 +68,11 @@ public class Utility {
     }
       return(inttwos ^ intfours);
     }
-    
+    */
+    public static int maxSpan(int[] nums){
+    int intcount4;
+    int intcount5;
+    for()
+
+    }
   }
