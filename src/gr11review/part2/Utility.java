@@ -56,15 +56,17 @@ public class Utility {
       */
     
     public static boolean either24(int[] nums){
-    int inttwo;
-    int intfour;
+   
     int intcount3;
-    boolean inttwo = false;
-    boolean intfour = false;
+    boolean inttwos = false;
+    boolean intfours = false;
   
     for(intcount3 = 0; intcount3<nums.length -1; intcount3++){
-      if(nums[intcount3]==2 && nums[intcount3+1]==2) 
+      if(nums[intcount3]==2 && nums[intcount3+1]==2)inttwos = true;
+      if(nums[intcount3]==4 && nums[intcount3]==4)intfours = true;
+      
     }
+      return(inttwos ^ intfours);
     }
     
   }
