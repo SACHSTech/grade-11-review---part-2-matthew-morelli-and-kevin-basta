@@ -3,7 +3,7 @@ package gr11review.part2;
 
 import java.io.*;
 public class Utility {
-  
+  /*
   public static String plusOut (String str, String word) {
       
         String stroldsentence = "";
@@ -24,7 +24,7 @@ public class Utility {
       return strnewsentence;
 
     }
-    
+    */
   /*
   public static double avgWord(String filenametxt) throws IOException {
     BufferedReader file = new BufferedReader(new FileReader(filenametxt));
@@ -69,10 +69,87 @@ public class Utility {
       return(inttwos ^ intfours);
     }
     */
+    /*
     public static int maxSpan(int[] nums){
     int intcount4;
     int intcount5;
-    for()
+    int intspan;
+    int intcalculation;
+
+    intspan = 0;
+    for(intcount4 = 0; intcount4 < nums.length; intcount4++){
+      for(intcount5 = 0; intcount5 < nums.length; intcount5++){
+        if(nums[intcount4] == nums[intcount5]){
+        intcalculation = intcount5 - intcount4 + 1;
+        intspan = Math.max(intcalculation,intspan);
+
+      }
 
     }
+    }
+    return intspan;
+    
   }
+  */
+  public static void yearAvg() throws IOException {
+    double dblaverage;
+    int intcount6;
+    int intcount7;
+    dblaverage = 0;
+    double[][] yeararray;
+    yeararray= new double[5][4];
+    yeararray[0][0]=19.1;
+    yeararray[0][1]=26.5;
+    yeararray[0][2]=17.6;
+    yeararray[0][3]=21.1;
+    yeararray[1][0]=23.1;
+    yeararray[1][1]=32.6;
+    yeararray[1][2]=21.4;
+    yeararray[1][3]=23.3;
+    yeararray[2][0]=26.5;
+    yeararray[2][1]=33.4;
+    yeararray[2][2]=18.9;
+    yeararray[2][3]=27.5;
+    yeararray[3][0]=24.1;
+    yeararray[3][1]=31.2;
+    yeararray[3][2]=21.2;
+    yeararray[3][3]=25.6;
+    yeararray[4][0]=26.8;
+    yeararray[4][1]=29.1;
+    yeararray[4][2]=25.1;
+    yeararray[4][3]=26.2;
+    /*
+    yeararray[1][1]=19.1;
+    yeararray[1][2]=26.5;
+    yeararray[1][3]=17.6;
+    yeararray[1][4]=21.1;
+    yeararray[2][1]=23.1;
+    yeararray[2][2]=32.6;
+    yeararray[2][3]=21.4;
+    yeararray[2][4]=23.3;
+    yeararray[3][1]=26.5;
+    yeararray[3][2]=33.4;
+    yeararray[3][3]=18.9;
+    yeararray[3][4]=27.5;
+    yeararray[4][1]=24.1;
+    yeararray[4][2]=31.2;
+    yeararray[4][3]=21.2;
+    yeararray[4][4]=25.6;
+    yeararray[5][1]=26.8;
+    yeararray[5][2]=29.1;
+    yeararray[5][3]=25.1;
+    yeararray[5][4]=26.2;
+    */
+    PrintWriter out = new PrintWriter(new FileWriter("src/gr11review/part2/yearAvg.txt", false));
+    
+    for(intcount6 = 0;intcount6<yeararray.length;intcount6++){
+      for(intcount7=0;intcount7<yeararray[intcount6].length;intcount7++){
+        dblaverage = (dblaverage+yeararray[intcount6][intcount7])/4;
+        
+        out.println(dblaverage);
+      }
+    }
+    out.close();
+
+  }
+}
