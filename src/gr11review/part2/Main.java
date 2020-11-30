@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) throws IOException {
-
+    /*
     String sentence;
 
     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
@@ -26,6 +26,7 @@ public class Main {
     System.out.println(Utility.canBalance(nums2));
 
     Utility.diagonal(8);
+    */
 
   }
 }
