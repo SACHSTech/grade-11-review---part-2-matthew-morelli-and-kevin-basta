@@ -15,9 +15,12 @@ public class Main{
   word = keyboard.readLine(); 
   System.out.println (Utility.plusOut(strsentence, word));
   */
+  /*
   String files; 
   files = "src/gr11review/part2/" + "world.txt";
   System.out.println(Utility.avgWord(files));
+*/
+  int[] array = {1, 2, 2} 
   }
 
 

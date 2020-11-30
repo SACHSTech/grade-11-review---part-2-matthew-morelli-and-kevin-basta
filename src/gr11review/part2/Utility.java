@@ -25,20 +25,20 @@ public class Utility {
 
     }
     
-  
+  /*
   public static double avgWord(String filenametxt) throws IOException {
     BufferedReader file = new BufferedReader(new FileReader(filenametxt));
-      String readingworld;
+      
       String wordread;
       double finalnumber;
       double average;
-      double readingwordnumber;
       double intcount2;
+
       finalnumber = 0;
       intcount2 = 0;
       wordread = "";
       readingworld="";
-      readingwordnumber = 0;
+      
       
       
       while((wordread = file.readLine()) != null){
@@ -53,7 +53,18 @@ public class Utility {
         
         return average;
       }
-    /*
-    public static boolean either24(int[] nums)
-    */
+      */
+    
+    public static boolean either24(int[] nums){
+    int inttwo;
+    int intfour;
+    int intcount3;
+    boolean inttwo = false;
+    boolean intfour = false;
+  
+    for(intcount3 = 0; intcount3<nums.length -1; intcount3++){
+      if(nums[intcount3]==2 && nums[intcount3+1]==2) 
+    }
+    }
+    
   }
