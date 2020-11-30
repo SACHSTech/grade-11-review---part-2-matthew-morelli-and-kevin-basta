@@ -28,7 +28,7 @@ public class Utility {
        
        
       
-        /returning answer to main
+        //returning answer to main
       return strnewsentence;
 
     }
@@ -39,6 +39,7 @@ public class Utility {
     BufferedReader file = new BufferedReader(new FileReader(filenametxt));
       //varaibles
       String wordread;
+      String readingworld;
       double finalnumber;
       double average;
       double intcount2;
@@ -133,13 +134,14 @@ public class Utility {
     yeararray[4][3]=26.2;
    //writing into a file 
     PrintWriter out = new PrintWriter(new FileWriter("src/gr11review/part2/yearAvg.txt", false));
-    //2 for loop
+    //2 for loops
     for(intcount6 = 0;intcount6<yeararray.length;intcount6++){
       for(intcount7=0;intcount7<yeararray[intcount6].length;intcount7++){
         dblaverage = (dblaverage+yeararray[intcount6][intcount7])/4;
         
-        out.println(dblaverage);
+        
       }
+      out.println(dblaverage);
     }
     out.close();
 

@@ -14,7 +14,7 @@ public class Main{
 
   Utility.yearAvg();
 
-  /*
+  
   String word;
   BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
   System.out.println("Enter the sentence");
@@ -22,21 +22,21 @@ public class Main{
   System.out.println("Enter the only character to be shown");
   word = keyboard.readLine(); 
   System.out.println (Utility.plusOut(strsentence, word));
-  */
-  /*
+  
+  
   String files; 
   files = "src/gr11review/part2/" + "world.txt";
   System.out.println(Utility.avgWord(files));
-*/
 
-/*
+
+
   int[] array24 = {4, 4, 1, 2, 2};
   System.out.println(Utility.either24(array24));
-  */
-  /*
+  
+  
   int[] arraymaxspan = {1, 4, 2, 1, 4, 1, 4};
   System.out.println(Utility.maxSpan(arraymaxspan));
-        */
+      
         
   }
 
