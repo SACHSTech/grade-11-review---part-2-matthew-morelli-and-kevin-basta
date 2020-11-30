@@ -9,7 +9,7 @@ package gr11review.part2;
 
 import java.io.*;
 public class Utility {
-  /*
+  
   public static String plusOut (String str, String word) {
       //varaibles
         String stroldsentence = "";
@@ -32,8 +32,8 @@ public class Utility {
       return strnewsentence;
 
     }
-    */
-  /*
+    
+  
   //average word in a text document
   public static double avgWord(String filenametxt) throws IOException {
     BufferedReader file = new BufferedReader(new FileReader(filenametxt));
@@ -62,8 +62,8 @@ public class Utility {
         
         return average;
       }
-      */
-    /*
+      
+    
       public static boolean either24(int[] nums){
     //variables
     int intcount3;
@@ -77,8 +77,8 @@ public class Utility {
     }
       return(inttwos ^ intfours);
     }
-    */
-    /*
+    
+    
       public static int maxSpan(int[] nums){
         //variables
       int intcount4;
@@ -100,7 +100,7 @@ public class Utility {
     return intspan;
     
   }
-  */
+  
   public static void yearAvg() throws IOException {
     //varaibles
     double dblaverage;
