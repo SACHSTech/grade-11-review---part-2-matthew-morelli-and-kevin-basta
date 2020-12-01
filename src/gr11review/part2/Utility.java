@@ -82,7 +82,7 @@ public class Utility {
   * are changed to that multiple of 10, until encountering another multiple 
   * of 10 in which that one gets repeated and so on. 
   *
-  *`@param nums  This is the array initially given
+  * @param nums  This is the array initially given
   * @return This returns a new array with the repeated multiples of 10 format
   * @author Kevin Basta
   */
