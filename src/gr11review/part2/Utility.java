@@ -1,16 +1,21 @@
 package gr11review.part2;
 
-/**
-* Utility with all the codes
-* 
-* @author: Addison Chan
-*
-*/
 
 import java.io.*;
 public class Utility {
   //plusOut
+  /**
+* a string and a non-empty word string, return a version of the original String where all chars have 
+*been replaced by pluses ("+"), except for appearances of the word string which are preserved unchanged.
+*
+* @param str  gets the sentence
+* @param word gets the word to be only shown and is excluded
+* @return retruns the sentence with ++ instead of the word thats was excluded
+* @author Addison Chan
+*/
   public static String plusOut (String str, String word) {
+    
+
       //varaibles
         String stroldsentence = "";
         String strnewsentence = "";
@@ -34,7 +39,14 @@ public class Utility {
     }
     
   
-  //average word in a text document
+  /**
+* a method longestWord(String filenametxt) such that given the name of a file filenametxt that contains 
+* a single word on each line, returns the longest word in the file.
+*
+* @param filenametxt picks the txt document
+* @return gets the average
+* @author Addison Chan
+*/
   public static double avgWord(String filenametxt) throws IOException {
     BufferedReader file = new BufferedReader(new FileReader(filenametxt));
       //varaibles
@@ -65,6 +77,14 @@ public class Utility {
       }
       
         //either24
+        /**
+* an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+*
+* @param nums gets the array and performs the either24 code
+* @return either is true or false if 2 is beside a 2 or a 4 beside 4
+* @author Addison Chan
+*/
+      
       public static boolean either24(int[] nums){
     //variables
     int intcount3;
@@ -80,6 +100,15 @@ public class Utility {
     }
     
       //maxSpan
+      /**
+* the leftmost and righmost appearances of some value in an array. We'll say that the "span" is the 
+* number of elements between the two inclusive. A single value has a span of 1. Returns the largest span 
+* found in the given array. (Efficiency is not a priority.)
+*
+* @param nums gets the array and performs the max span of the array
+* @return finds the span of the array
+* @author Addison Chan
+*/
       public static int maxSpan(int[] nums){
         //variables
       int intcount4;
@@ -102,6 +131,15 @@ public class Utility {
     
   }
   //year average
+  /**
+* a method that defines a two dimensional array that holds the table of scoring average data shown above 
+* (the grey area). The method will compute the average value of each of the 5 years and output the 
+* averages to a file yearAvg.txt. Each value will be on it's own line.
+*
+* @param N/A
+* @return prints the 6 averages into the txt document
+* @author Addison Chan
+*/
   public static void yearAvg() throws IOException {
     //varaibles
     double dblaverage;
