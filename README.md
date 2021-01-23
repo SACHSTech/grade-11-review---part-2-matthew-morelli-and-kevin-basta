@@ -35,6 +35,18 @@ sumNumbers("aa11b33") → 44
 sumNumbers("7 11") → 18
 ```
 
+### Methods 3
+Given a string and a non-empty word string, return a version of the original String where all chars have been replaced by pluses ("+"), except for appearances of the word string which are preserved unchanged.
+### public static String plusOut(String str, String word)
+
+#### Examples
+```
+plusOut("12xy34", "xy") → "++xy++"
+plusOut("12xy34", "1") → "1+++++"
+plusOut("12xy34xyabcxy", "xy") → "++xy++xy+++xy"
+```
+
+
 ### File IO - Read 1
 Write a method `longestWord(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line,  returns the longest word in the file.  
 **Signature** `public static String longestWord(String filenametxt)`
@@ -69,7 +81,22 @@ consectetur
 adipiscing 
 elit
 ```
-`alphaWord("words.txt")` --> `"amet"`
+`alphaWord("words.txt")` --> `"adipiscing"`
+
+### File IO - Read 3
+Write a method `avgWord(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line, returns the average length of the words in the file.  
+**Signature** `public static double avgWord(String filenametxt)`
+
+#### Example
+words.txt contains:  
+```
+sit
+amet
+consectetur
+```
+`avgWord("words.txt")` --> `6.0`
+
+
 
 
 ### Array 1 - One Dimensional
@@ -96,7 +123,19 @@ notAlone([3, 4], 3) → [3, 4]
 ```
 
 
-### Array 3 - One Dimensional - Two Loops
+### Array 3 - One Dimensional
+Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.
+**Signature** `public static boolean either24(int[] nums)`
+
+#### Example
+```
+either24([1, 2, 2]) → true
+either24([4, 4, 1]) → true
+either24([4, 4, 1, 2, 2]) → false
+```
+
+
+### Array 4 - One Dimensional - Two Loops
 Given two arrays of ints sorted in increasing order, `outer` and `inner`, return true if all of the numbers in `inner` appear in `outer`. The best solution makes only a single "linear" pass of both arrays, taking advantage of the fact that both arrays are already in sorted order.  
 **Signature** `public boolean linearIn(int[] outer, int[] inner)`
 
@@ -108,7 +147,7 @@ linearIn([1, 2, 4, 4, 6], [2, 4]) → true
 ```
 
 
-### Array 4 - One Dimensional - Two Loops
+### Array 5 - One Dimensional - Two Loops
 Given a non-empty array, return true if there is a place to split the array so that the sum of the numbers on one side is equal to the sum of the numbers on the other side.  
 **Signature**  `public boolean canBalance(int[] nums)`
 
@@ -119,8 +158,21 @@ canBalance([2, 1, 1, 2, 1]) → false
 canBalance([10, 10]) → true
 ```
 
+### Array 6 - One Dimensional - Two Loops
+Consider the leftmost and righmost appearances of some value in an array. We'll say that the "span" is the number of elements between the two inclusive. A single value has a span of 1. Returns the largest span found in the given array. (Efficiency is not a priority.)
 
-### Array 5 - Two Dimensional
+#### Example
+```
+maxSpan([1, 2, 1, 1, 3]) → 4
+maxSpan([1, 4, 2, 1, 4, 1, 4]) → 6
+maxSpan([1, 4, 2, 1, 4, 4, 4]) → 6
+```
+**Signature**  `public static int maxSpan(int[] nums)`
+
+
+
+
+### Array 7 - Two Dimensional
 ![pascal](/pascal.png)
 
 * The first row are the numbers in p[0][0], p[0][1], p[0][2],..., p[0][9]
@@ -133,6 +185,7 @@ Write a method `pascalTri(int i, int j)`  that outputs to a text file `pascalOut
 
 #### Example
 `pascalTri(3, 4)` outputs to pascalOut.txt:  
+
 ```
 1,1,1,1  
 1,2,3,4  
@@ -140,6 +193,7 @@ Write a method `pascalTri(int i, int j)`  that outputs to a text file `pascalOut
 ```  
 
 `pascalTri(4, 5)` outputs to pascalOut.txt:  
+
 ```
 1,1,1,1,1  
 1,2,3,4,5  
@@ -148,7 +202,7 @@ Write a method `pascalTri(int i, int j)`  that outputs to a text file `pascalOut
 ```
 
 
-### Array 6 - Two Dimensional 
+### Array 8 - Two Dimensional 
 Given an integer n, write a method `diagonal(int n)` that outputs to a text file `diagonalOut.txt`, a two-dimensional array of size (n×n) populated as follows, with a comma between each number:  
 * The positions on the minor diagonal (from the upper right to the lower left corner) receive 1 .
 * The positions above this diagonal receive 0 .
@@ -157,6 +211,7 @@ Given an integer n, write a method `diagonal(int n)` that outputs to a text file
 
 #### Example
 `diagonal(3)`  outputs to `diagonalOut.txt`:
+
 ```
 0,0,1
 0,1,2
@@ -164,6 +219,7 @@ Given an integer n, write a method `diagonal(int n)` that outputs to a text file
 ```
 
 `diagonal(8)`  outputs to `diagonalOut.txt`:
+
 ```
 0,0,0,0,0,0,0,1
 0,0,0,0,0,0,1,2
@@ -172,3 +228,12 @@ Given an integer n, write a method `diagonal(int n)` that outputs to a text file
 0,0,0,1,2,2,2,2
 0,0,1,2,2,2,2,2
 ```
+
+
+### Array 9 - Two Dimensional
+![](photo.jpeg)  
+Consider the table above that lists the scoring averages of 5 players for their first 5 seasons in the nba. Write a method that defines a two dimensional array that holds the table of scoring average data shown above (the grey area). The method will compute the average value of each of the 5 years and output the averages to a file `yearAvg.txt`. Each value will be on it's own line.  
+**Signature** `public static void yearAvg()`  
+
+
+
